@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "managedIdentityLocation": {
+      "value": "uksouth"
+    },
+    "dnsZones": {
+      "value": [
+        {
+          "groupName": "blob",
+          "dnsZone": "privatelink.blob.core.windows.net"
+        },
+        {
+          "groupName": "table",
+          "dnsZone": "privatelink.table.core.windows.net"
+        },
+        {
+          "groupName": "sqlServer",
+          "dnsZone": "privatelink.database.windows.net"
+        },
+        {
+          "groupName": "queue",
+          "dnsZone": "privatelink.core.windows.net"
+        },
+        {
+          "groupName": "file",
+          "dnsZone": "privatelink.file.core.windows.net"
+        },
+        {
+          "groupName": "vault",
+          "dnsZone": "privatelink.vaultcore.azure.net"
+        },
+        {
+          "groupName": "registry",
+          "dnsZone": "privatelink.azurecr.io"
+        },
+        {
+          "groupName": "namespace",
+          "dnsZone": "privatelink.servicebus.windows.net"
+        },
+        {
+          "groupName": "sites",
+          "dnsZone": "privatelink.azurewebsites.net"
+        },
+        {
+          "groupName": "management",
+          "dnsZone": "privatelink.uksouth.azmk8s.io"
+        },
+        {
+          "groupName": "gateway",
+          "dnsZone": "privatelink.azure-api.net"
+        }
+      ]
+    },
+    "dnsZoneResourceGroupName": {
+      "value": "resource-group-for-dns-zones"
+    },
+    "hubNetworkResourceGroup": {
+      "value": "Resource-Group-of-hub-virtual-network"
+    },
+    "hubNetworkName": {
+      "value": "name-of-hub-virtual-network"
+    }
+  }
+}
